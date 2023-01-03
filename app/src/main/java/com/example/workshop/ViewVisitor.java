@@ -151,8 +151,6 @@ public class ViewVisitor extends AppCompatActivity {
                 adapter = new VisitorAdapter(ViewVisitor.this, visitorList);
                 ViewVisitor.setAdapter(adapter);
             }
-
-
         },new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
@@ -172,7 +170,6 @@ public class ViewVisitor extends AppCompatActivity {
         // a json object request.
         RequestQueue requestQueue=Volley.newRequestQueue(ViewVisitor.this);
         requestQueue.add(request);
-
     }
 
 }
