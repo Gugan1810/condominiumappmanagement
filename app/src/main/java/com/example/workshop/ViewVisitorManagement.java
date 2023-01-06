@@ -25,6 +25,7 @@ public class ViewVisitorManagement extends AppCompatActivity {
 
     RecyclerView ViewVisitorManagement;
     List<Visitor> visitorList;
+
     ViewVisitorManagementAdapter adapterManagement;
 
 
@@ -40,6 +41,8 @@ public class ViewVisitorManagement extends AppCompatActivity {
         visitorList =  new ArrayList<>();
 
         getVisitorsDetails();
+
+
 
 
 
@@ -69,6 +72,7 @@ public class ViewVisitorManagement extends AppCompatActivity {
                         String CheckOutDate = Object.getString("checkOutDate").trim();
                         String ParkingNumber = Object.getString("parkingNumber").trim();
                         String ApproveStatus = Object.getString("approveParking").trim();
+
 
                         Visitor visitor = new Visitor(VisitorName, PhoneNumber, CheckInDate, CheckOutDate, ParkingNumber,ApproveStatus);
                         visitorList.add(visitor);

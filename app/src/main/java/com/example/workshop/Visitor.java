@@ -15,6 +15,9 @@ public class Visitor implements Serializable {
     private String ParkingNumber;
     private String ApproveStatus;
 
+    public Visitor(String parkingNumber) {
+    }
+
     public String getApproveStatus() {
         return ApproveStatus;
     }

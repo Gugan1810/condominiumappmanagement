@@ -71,7 +71,10 @@ public class ViewVisitorManagementAdapter extends RecyclerView.Adapter<ViewVisit
                                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-
+                                        Intent intentApprove = new Intent(context,ApproveVisitorParking.class);
+                                        intentApprove.putExtra("visitor",visitor);
+                                        intentApprove.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                        context.startActivity(intentApprove);
                                     }
                                 });
                                 AlertDialog dialog = builder.create();
