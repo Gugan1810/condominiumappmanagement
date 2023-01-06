@@ -2,6 +2,7 @@ package com.example.workshop;
 
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,16 +13,28 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ViewVisitorManagementAdapter extends RecyclerView.Adapter<ViewVisitorManagementAdapter.ViewHolder> {
 
     Context context;
     List<Visitor> visitorManagement_list;
+
 
     public ViewVisitorManagementAdapter(Context context, List<Visitor> visitorManagement_list) {
         this.context = context;
@@ -94,7 +107,10 @@ public class ViewVisitorManagementAdapter extends RecyclerView.Adapter<ViewVisit
                                 builderManagement.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-
+                                        Intent intentReject= new Intent(context,Rejected.class);
+                                        intentReject.putExtra("visitor",visitor);
+                                        intentReject.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                        context.startActivity(intentReject);
                                     }
                                 });
                                 AlertDialog dialogManagement = builderManagement.create();
