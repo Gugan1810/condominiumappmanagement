@@ -52,7 +52,7 @@ public class ViewVisitorManagement extends AppCompatActivity {
 
 
         // url to post our data
-        String url = "http://192.168.0.12/condoapp1/getViewVisitorManagement.php";
+        String url = "http://10.132.7.154/condoapp1/getViewVisitorManagement.php";
 
 
         // on below line we are calling a string

@@ -15,7 +15,7 @@ public class mainPage extends AppCompatActivity {
     }
 
     public void fnVisitorRegisteration(View view) {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), AddVisitor.class);
         startActivity(intent);
 
     }

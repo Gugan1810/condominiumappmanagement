@@ -52,7 +52,7 @@ public class Rejected extends AppCompatActivity {
         progressDialog.setMessage("Updating...");
         progressDialog.show();
 
-        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.12/condoapp1/Approve.php", new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, "http://10.132.7.154/condoapp1/Approve.php", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Toast.makeText(Rejected.this, response, Toast.LENGTH_SHORT).show();

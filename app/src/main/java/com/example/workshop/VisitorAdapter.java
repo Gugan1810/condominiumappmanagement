@@ -117,7 +117,7 @@ public class VisitorAdapter extends RecyclerView.Adapter<VisitorAdapter.ViewHold
     }
 
     private void deleteData(final String VisitorName){
-        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.12/condoapp1/deleteVisitor.php",
+        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.16/condoapp1/deleteVisitor.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

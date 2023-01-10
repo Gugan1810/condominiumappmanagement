@@ -118,7 +118,7 @@ public class ViewVisitor extends AppCompatActivity {
 
 
         // url to post our data
-        String url = "http://192.168.0.12/condoapp1/getVisitor.php";
+        String url = "http://192.168.0.16/condoapp1/getVisitor.php";
 
 
         // on below line we are calling a string

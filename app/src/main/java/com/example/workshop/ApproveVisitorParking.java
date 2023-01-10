@@ -41,6 +41,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,7 +100,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
 
 
         // url to post our data
-        String url = "http://192.168.0.12/condoapp1/viewVisitor.php";
+        String url = "http://10.132.7.154/condoapp1/viewVisitor.php";
 
         // creating a new variable for our request queue
         RequestQueue queue = Volley.newRequestQueue(ApproveVisitorParking.this);
@@ -121,6 +122,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
                         // if we get the data then we are setting it in our text views in below line.
                         VehicleType = jsonObject.getString("vehicleType");
                         VehicleTypeTxt.setText(VehicleType);
+
 
                     }
                     // on below line we are displaying
@@ -165,7 +167,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
 
 
         // url to post our data
-        String url1 = "http://192.168.0.12/condoapp1/getParkingDetails.php";
+        String url1 = "http://10.132.7.154/condoapp1/getParkingDetails.php";
 
 
         // on below line we are calling a string
@@ -185,7 +187,9 @@ public class ApproveVisitorParking extends AppCompatActivity {
                         ParkingLot.add(ParkingNumber);
                         boolean motor1 = ParkingLot.contains("A1 M100");
                         if (motor1){
-                            btnMotor1.setEnabled(false);
+                            Button mo1;
+                            mo1=findViewById(R.id.btnMotor1);
+                            mo1.setEnabled(false);
                         }
                         boolean motor2 = ParkingLot.contains("A1 M101");
                         if (motor2){
@@ -281,7 +285,7 @@ public class ApproveVisitorParking extends AppCompatActivity {
         progressDialog.setMessage("Updating...");
         progressDialog.show();
 
-        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.12/condoapp1/Approve.php", new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, "http://10.132.7.154/condoapp1/Approve.php", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Toast.makeText(ApproveVisitorParking.this, response, Toast.LENGTH_SHORT).show();

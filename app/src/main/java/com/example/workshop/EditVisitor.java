@@ -176,7 +176,7 @@ public class EditVisitor extends AppCompatActivity implements AdapterView.OnItem
 
 
         // url to post our data
-        String url = "http://192.168.0.12/condoapp1/viewVisitor.php";
+        String url = "http://192.168.0.16/condoapp1/viewVisitor.php";
 
         // creating a new variable for our request queue
         RequestQueue queue = Volley.newRequestQueue(EditVisitor.this);
@@ -272,7 +272,7 @@ public class EditVisitor extends AppCompatActivity implements AdapterView.OnItem
         progressDialog.setMessage("Updating...");
         progressDialog.show();
 
-        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.12/condoapp1/updateVisitor.php", new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.16/condoapp1/updateVisitor.php", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Toast.makeText(EditVisitor.this, response, Toast.LENGTH_SHORT).show();
